@@ -1,0 +1,2 @@
+Method Name, Identifying Entities, Uncovering Topology, Propagating Information, Mixing Representations, Application
+FuNet-https://arxiv.org/abs/2008.02457, Hyperspectral Pixels,Similarities between two vertices defined by radial basis function, miniGCN (mini-batching with GCNs), Concatenation/Addition/Multiplication of GCN and CNN final layer features, Hyperspectral image classification
