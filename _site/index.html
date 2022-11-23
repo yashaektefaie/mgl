@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css"> -->
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script> -->
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,58 +58,475 @@
 
 <p>This website hosts a table to highlight selected studies from the perspective on <a href="https://arxiv.org/abs/2209.03299">multimodal graph learning (MGL)</a> and the community in a supplementary table and how they fall under the MGL blueprint. <strong>This table is live meaning anyone can submit a study to be considered for this table</strong>and we will update the table <strong>every week</strong>. Entries are grouped by application area. This table is meant as (1) a resouorce to those looking to use MGL for their application but unsure how each compoonent is realized in practice and (2) a map of MGL as an emerging field.</p>
 
-<table>
-  
-    
-    <tr>
-      
-        <th>Method Name</th>
-      
-        <th> Identifying Entities</th>
-      
-        <th> Uncovering Topology</th>
-      
-        <th> Propagating Information</th>
-      
-        <th> Mixing Representations</th>
-      
-        <th> Application</th>
-      
-    </tr>
-    
+<h2 id="use-this-link-to-submit-a-study-to-be-added-to-this-table">Use this <a href="https://forms.gle/ACBwCCfH6UzTeaBZ8">link</a> to submit a study to be added to this table.</h2>
 
-    <tr class="row1">
+<p><br /></p>
+
+<table id="mgl" class="display">
+  
+      
+        <thead>
+        <tr>
+          
+            <th>Method Name</th>
+          
+            <th> Identifying Entities</th>
+          
+            <th> Uncovering Topology</th>
+          
+            <th> Propagating Information</th>
+          
+            <th> Mixing Representations</th>
+          
+            <th> Application</th>
+          
+            <th> Domain</th>
+          
+        </tr>
+        </thead>
+      
+    
+        <tr class="row1">
 <td class="col1">
-		
-			
-		    <a href="https://arxiv.org/abs/2008.02457"> FuNet </a>
-		
-    </td><td class="col2">
-		
-		     Hyperspectral Pixels
-		
-    </td><td class="col3">
-		
-		    Similarities between two vertices defined by radial basis function
-		
-    </td><td class="col4">
-		
-		     miniGCN (mini-batching with GCNs)
-		
-    </td><td class="col5">
-		
-		     Concatenation/Addition/Multiplication of GCN and CNN final layer features
-		
-    </td><td class="col6">
-		
-		     Hyperspectral image classification
-		
-    </td></tr>
+      		
+      			
+      		  <a href="https://arxiv.org/abs/2008.02457"> FuNet </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Hyperspectral pixels
+      		
+          </td><td class="col3">
+      		
+      		   Radial basis function similarity
+      		
+          </td><td class="col4">
+      		
+      		   miniGCN (GCN mini-batching)
+      		
+          </td><td class="col5">
+      		
+      		   Concatenation/Sum/Product
+      		
+          </td><td class="col6">
+      		
+      		   Hyperspectral image quad classification
+      		
+          </td><td class="col7">
+      		
+      		    Image
+      		
+          </td></tr>
 
-  
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://arxiv.org/abs/2001.00335"> GraphFCN </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Pixels
+      		
+          </td><td class="col3">
+      		
+      		   Edge weights based on gaussian kernel matrix
+      		
+          </td><td class="col4">
+      		
+      		   GCN with weighted adjacency matrix
+      		
+          </td><td class="col5">
+      		
+      		   Graph loss added with fully connected network
+      		
+          </td><td class="col6">
+      		
+      		   Image Semantic Segmentation
+      		
+          </td><td class="col7">
+      		
+      		    Image
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Graph_Structured_Network_for_Image"> GSMN </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Images/relations/attributes
+      		
+          </td><td class="col3">
+      		
+      		   Visual graph for images combined with textual graph
+      		
+          </td><td class="col4">
+      		
+      		   Node-level and graph-level matching
+      		
+          </td><td class="col5">
+      		
+      		   Similarity function for positive and negative pairs
+      		
+          </td><td class="col6">
+      		
+      		   Image-text matching
+      		
+          </td><td class="col7">
+      		
+      		    Image
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://arxiv.org/abs/2002.05544"> RAG GAT </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Super-pixels
+      		
+          </td><td class="col3">
+      		
+      		   Region Adjacency Graph
+      		
+          </td><td class="col4">
+      		
+      		   Graph Attention Network
+      		
+          </td><td class="col5">
+      		
+      		   Sum pooling combined with an MLP
+      		
+          </td><td class="col6">
+      		
+      		   Superpixel image classification
+      		
+          </td><td class="col7">
+      		
+      		    Image
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://arxiv.org/pdf/1809.05679.pdf"> TextGCN </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Words/Documents
+      		
+          </td><td class="col3">
+      		
+      		   Occurence edges in text and corpus
+      		
+          </td><td class="col4">
+      		
+      		   GCN
+      		
+          </td><td class="col5">
+      		
+      		   No mixing/single-channel model
+      		
+          </td><td class="col6">
+      		
+      		   Text classification
+      		
+          </td><td class="col7">
+      		
+      		    Language
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://aclanthology.org/2020.acl"> CoGAN </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Sentences/aspects
+      		
+          </td><td class="col3">
+      		
+      		   Sentences and aspects as nodes
+      		
+          </td><td class="col4">
+      		
+      		   Cooperative graph attention
+      		
+          </td><td class="col5">
+      		
+      		   Softmax decoding block
+      		
+          </td><td class="col6">
+      		
+      		   Aspect Sentiment Classification
+      		
+          </td><td class="col7">
+      		
+      		    Language
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://arxiv.org/pdf/2103.08200.pdf"> MCN </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Sentences/mentions/entities
+      		
+          </td><td class="col3">
+      		
+      		   Document-level graph
+      		
+          </td><td class="col4">
+      		
+      		   Relation-aware GCN
+      		
+          </td><td class="col5">
+      		
+      		   Sigmoid function for probability of entity pairs
+      		
+          </td><td class="col6">
+      		
+      		   Document-level relation extraction
+      		
+          </td><td class="col7">
+      		
+      		    Languauge
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://aclanthology.org/P19"> GPGNN </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Word and position encodings
+      		
+          </td><td class="col3">
+      		
+      		   Generated Adjacency Matrix
+      		
+          </td><td class="col4">
+      		
+      		   Message Passing
+      		
+          </td><td class="col5">
+      		
+      		   Pair-wise representation product
+      		
+          </td><td class="col6">
+      		
+      		   Relation Extraction
+      		
+          </td><td class="col7">
+      		
+      		    Language
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://pubs.rsc.org/en/content/articlepdf/2021/sc/d0sc04823b"> QMGNN </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Atoms
+      		
+          </td><td class="col3">
+      		
+      		   Chemical Bonds
+      		
+          </td><td class="col4">
+      		
+      		   Weisfeiler-Leman Network and Global Attention
+      		
+          </td><td class="col5">
+      		
+      		   Concat with quantum mechanical descriptors
+      		
+          </td><td class="col6">
+      		
+      		   Regio-selectivity prediction
+      		
+          </td><td class="col7">
+      		
+      		    Natural Science
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://arxiv.org/pdf/2002.09405.pdf"> GNS </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Particles
+      		
+          </td><td class="col3">
+      		
+      		   Radial particle connectivity
+      		
+          </td><td class="col4">
+      		
+      		   Graph network (learned directed message passing)
+      		
+          </td><td class="col5">
+      		
+      		   No mixing/single-channel model
+      		
+          </td><td class="col6">
+      		
+      		   Particle-based simulation
+      		
+          </td><td class="col7">
+      		
+      		    Natural Science
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://www.nature.com/articles/s41592"> MaSIF </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Discretized protein surface mesh
+      		
+          </td><td class="col3">
+      		
+      		   Overlapping geodesic radial features
+      		
+          </td><td class="col4">
+      		
+      		   System of gaussian kernels on a local geodesic system
+      		
+          </td><td class="col5">
+      		
+      		   No mixing/single-channel model
+      		
+          </td><td class="col6">
+      		
+      		   Ligand site prediction and classification
+      		
+          </td><td class="col7">
+      		
+      		    Natural Science
+      		
+          </td></tr>
+
+      
+    
+      
+    
+        <tr class="row1">
+<td class="col1">
+      		
+      			
+      		  <a href="https://arxiv.org/pdf/2203.05880.pdf"> MMGL </a> 
+      		
+          </td><td class="col2">
+      		
+      		   Patients
+      		
+          </td><td class="col3">
+      		
+      		   Modality aware latent graph
+      		
+          </td><td class="col4">
+      		
+      		   Adaptive graph learning based on a GCN
+      		
+          </td><td class="col5">
+      		
+      		   Sub-branch prediction neural network
+      		
+          </td><td class="col6">
+      		
+      		   Disease prediction
+      		
+          </td><td class="col7">
+      		
+      		    Natural Science
+      		
+          </td></tr>
+
+      
+    
 </table>
 
-<h2 id="use-this-link-to-submit-a-study-to-be-added-to-this-table">Use this <a href="https://forms.gle/ACBwCCfH6UzTeaBZ8">link</a> to submit a study to be added to this table.</h2>
+<script type="text/javascript" class="init">
+$(document).ready(function() {
+  // Create a new DataTable object
+  table = $('#mgl').DataTable();
+});
+</script>
+
+<p><br />
+<br /></p>
 
 
       </div>

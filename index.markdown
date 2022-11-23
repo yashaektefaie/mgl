@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
+order: 2
 ---
 # Multimodal learning on graphs 
 
@@ -17,28 +18,47 @@ For more information please read our perspective [here](https://arxiv.org/abs/22
 
 This website hosts a table to highlight selected studies from the perspective on [multimodal graph learning (MGL)](https://arxiv.org/abs/2209.03299) and the community in a supplementary table and how they fall under the MGL blueprint. **This table is live meaning anyone can submit a study to be considered for this table**and we will update the table **every week**. Entries are grouped by application area. This table is meant as (1) a resouorce to those looking to use MGL for their application but unsure how each compoonent is realized in practice and (2) a map of MGL as an emerging field.
 
+## Use this [link](https://forms.gle/ACBwCCfH6UzTeaBZ8) to submit a study to be added to this table.
 
-<table>
+<br />
+
+<table id = "mgl" class="display">
   {% for row in site.data.mgl %}
-    {% if forloop.first %}
-    <tr>
-      {% for pair in row %}
-        <th>{{ pair[0] }}</th>
-      {% endfor %}
-    </tr>
-    {% endif %}
-
-    {% tablerow pair in row %}
-		{% if pair[0] == "Method Name" %}
-			{% assign beatles = pair[1] | split: "-" %}
-		    <a href = "{{ beatles[1] }}"> {{ beatles[0] }} </a>
-		{% else %}
-		    {{ pair[1] }}
-		{% endif %}
-    {% endtablerow %}
-  {% endfor %}
+      {% if forloop.first %}
+        <thead>
+        <tr>
+          {% for pair in row %}
+            <th>{{ pair[0] }}</th>
+          {% endfor %}
+        </tr>
+        </thead>
+      {% endif %}
+    
+        {% tablerow pair in row %}
+      		{% if pair[0] == "Method Name" %}
+      			{% assign beatles = pair[1] | split: "-" %}
+      		  <a href = "{{ beatles[1] }}"> {{ beatles[0] }} </a> 
+      		{% else %}
+      		   {{ pair[1] }}
+      		{% endif %}
+          {% endtablerow %}
+      
+    {% endfor %}
 </table>
 
-## Use this [link](https://forms.gle/ACBwCCfH6UzTeaBZ8) to submit a study to be added to this table.
+
+<script type="text/javascript" class="init">
+$(document).ready(function() {
+  // Create a new DataTable object
+  table = $('#mgl').DataTable();
+});
+</script>
+
+  
+
+<br />
+<br />
+
+
 
 
