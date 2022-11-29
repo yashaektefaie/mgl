@@ -5,18 +5,18 @@
 layout: default
 order: 2
 ---
-# Multimodal learning on graphs 
+# Multimodal learning with graphs 
 
-Artificial intelligence on graphs (graph AI) has achieved remarkable success in modeling complex systems, ranging from dynamical systems in biology to interacting particle systems in physics. The increasingly hetero- geneous graph datasets call for multimodal graph AI algorithms to combine multiple inductive biases—the set of assumptions that algorithms use to predict outputs of given inputs that they have not yet encountered. Learning on multimodal graph datasets presents fundamental challenges because inductive biases can vary by data modality and graphs might not be explicitly given in the input. To address these challenges, multimodal graph AI methods combine multiple modalities while leveraging cross-modal dependencies. Here, we survey 142 studies in graph AI and realize that diverse datasets are increasingly combined using graphs and fed into sophisticated multimodal models. These models stratify into image-, language-, and knowledge-grounded multimodal graph AI methods. Using this categorization of state-of-the-art methods, we put forward an algorithmic blueprint for multimodal graph AI, which we use to study existing methods and standardize the design of future methods for highly complex systems.
+[In our perspective](https://arxiv.org/abs/2209.03299), we observe that artificial intelligence for graphs (graph AI) has achieved remarkable success in modeling complex systems, ranging from dynamic networks in biology to interacting particle systems in physics. However, the increasingly heterogeneous graph datasets call for multimodal methods that can combine different inductive biases—the set of assumptions that algorithms use to make predictions for inputs they have not encountered during training. Learning on multimodal graph datasets presents fundamental challenges because the inductive biases can vary by data modality and graphs might not be explicitly given in the input. 
+
+To address these challenges, multimodal graph AI methods combine different modalities while leveraging cross-modal dependencies. [Here, we survey 145 studies](https://arxiv.org/abs/2209.03299) in graph AI and realize that diverse datasets are increasingly combined using graphs and fed into sophisticated multimodal methods, specified as image-intensive, knowledge-grounded and language-intensive models. Using this categorization, we introduce a blueprint for multimodal graph AI to study existing methods and guide the design of future methods.
 
 ![align="center"](images/Figure1.jpg)
-*Shown on the left are the different data modalities covered in our multimodal graph learning perspective. Shown on the right are key machine learning tasks for which multimodal graph learning has been used successfully. This Perspective introduces the multimodal graph learning (MGL) blueprint that serves as a unifying framework within which multimodal graph neural architectures can be expressed. It also surveys applications of MGL in computer vision, natural language processing, and natural sciences. This website displays these studies in a supplementary table and how they fall under the MGL blueprint.*
+*Shown on the left are the different data modalities covered in our [multimodal graph learning perspective](https://arxiv.org/abs/2209.03299). Shown on the right are key machine learning tasks for which multimodal graph learning (MGL) has been used successfully.*
 
-For more information please read our perspective [here](https://arxiv.org/abs/2209.03299).
+Below are studies from our [perspective](https://arxiv.org/abs/2209.03299) and the community on multimodal graph learning (MGL) and how they fall under the MGL blueprint. This website is meant as (1) a resouorce to those looking to use MGL for their application but unsure how each compoonent is realized in practice and (2) a map of MGL as an emerging field.
 
-# Table
-
-This website hosts a table to highlight selected studies from the perspective on [multimodal graph learning (MGL)](https://arxiv.org/abs/2209.03299) and the community in a supplementary table and how they fall under the MGL blueprint. **This table is live meaning anyone can submit a study to be considered for this table**and we will update the table **every week**. Entries are grouped by application area. This table is meant as (1) a resouorce to those looking to use MGL for their application but unsure how each compoonent is realized in practice and (2) a map of MGL as an emerging field.
+**This table is live meaning anyone can submit a study to be considered for this table** and we will update the table **every week**. Entries are grouped by application area. 
 
 ## Use this [link](https://forms.gle/ACBwCCfH6UzTeaBZ8) to submit a study to be added to this table.
 
@@ -35,7 +35,7 @@ This website hosts a table to highlight selected studies from the perspective on
       {% endif %}
     
         {% tablerow pair in row %}
-      		{% if pair[0] == "Method Name" %}
+      		{% if pair[0] == "Method" %}
       			{% assign beatles = pair[1] | split: "-" %}
       		  <a href = "{{ beatles[1] }}"> {{ beatles[0] }} </a> 
       		{% else %}

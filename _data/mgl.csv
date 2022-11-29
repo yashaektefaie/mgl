@@ -1,13 +1,13 @@
-Method Name, Identifying Entities, Uncovering Topology, Propagating Information, Mixing Representations, Application, Domain
-FuNet-https://arxiv.org/abs/2008.02457,Hyperspectral pixels,Radial basis function similarity,miniGCN (GCN mini-batching),Concatenation/Sum/Product,Hyperspectral image quad classification, Image
-GraphFCN-https://arxiv.org/abs/2001.00335,Pixels,Edge weights based on gaussian kernel matrix,GCN with weighted adjacency matrix,Graph loss added with fully connected network,Image Semantic Segmentation, Image
+Method, MGL Component 1: Identifying Entities, MGL Component 2: Uncovering Topology, MGL Component 3: Propagating Information, MGL Component 4: Mixing Representations, Application, Domain
+FuNet-https://arxiv.org/abs/2008.02457,Hyperspectral pixels,Radial basis function similarity,miniGCN (GCN mini-batching),Concatenation/sum/product,Hyperspectral image quad classification, Image
+GraphFCN-https://arxiv.org/abs/2001.00335,Pixels,Edge weights based on gaussian kernel matrix,GCN with weighted adjacency matrix,Graph loss added with fully connected network,Image semantic segmentation, Image
 GSMN-https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Graph_Structured_Network_for_Image-Text_Matching_CVPR_2020_paper.pdf,Images/relations/attributes,Visual graph for images combined with textual graph,Node-level and graph-level matching,Similarity function for positive and negative pairs,Image-text matching, Image
-RAG GAT-https://arxiv.org/abs/2002.05544,Super-pixels,Region Adjacency Graph,Graph Attention Network,Sum pooling combined with an MLP,Superpixel image classification, Image
-TextGCN-https://arxiv.org/pdf/1809.05679.pdf,Words/Documents,Occurence edges in text and corpus,GCN,No mixing/single-channel model,Text classification, Language
-CoGAN-https://aclanthology.org/2020.acl-main.338.pdf,Sentences/aspects,Sentences and aspects as nodes,Cooperative graph attention,Softmax decoding block,Aspect Sentiment Classification, Language
+RAG GAT-https://arxiv.org/abs/2002.05544,Super-pixels,Region adjacency graph,Graph attention network,Sum pooling combined with an MLP,Superpixel image classification, Image
+TextGCN-https://arxiv.org/pdf/1809.05679.pdf,Words/documents,Occurence edges in text and corpus,GCN,No mixing/single-channel model,Text classification, Language
+CoGAN-https://aclanthology.org/2020.acl-main.338.pdf,Sentences/aspects,Sentences and aspects as nodes,Cooperative graph attention,Softmax decoding block,Aspect sentiment classification, Language
 MCN-https://arxiv.org/pdf/2103.08200.pdf,Sentences/mentions/entities,Document-level graph,Relation-aware GCN,Sigmoid function for probability of entity pairs,Document-level relation extraction, Languauge
-GPGNN-https://aclanthology.org/P19-1128/,Word and position encodings,Generated Adjacency Matrix,Message Passing,Pair-wise representation product,Relation Extraction, Language
-QMGNN-https://pubs.rsc.org/en/content/articlepdf/2021/sc/d0sc04823b,Atoms,Chemical Bonds,Weisfeiler-Leman Network and Global Attention,Concat with quantum mechanical descriptors,Regio-selectivity prediction, Natural Science
-GNS-https://arxiv.org/pdf/2002.09405.pdf,Particles,Radial particle connectivity,Graph network (learned directed message passing),No mixing/single-channel model,Particle-based simulation, Natural Science
-MaSIF-https://www.nature.com/articles/s41592-019-0666-6,Discretized protein surface mesh,Overlapping geodesic radial features,System of gaussian kernels on a local geodesic system,No mixing/single-channel model,Ligand site prediction and classification, Natural Science
-MMGL-https://arxiv.org/pdf/2203.05880.pdf,Patients,Modality aware latent graph,Adaptive graph learning based on a GCN,Sub-branch prediction neural network,Disease prediction, Natural Science
+GPGNN-https://aclanthology.org/P19-1128/,Word and position encodings,Generated adjacency matrix,Message passing,Pair-wise representation product,Relation extraction, Language
+QMGNN-https://pubs.rsc.org/en/content/articlepdf/2021/sc/d0sc04823b,Atoms,Chemical bonds,Weisfeiler-Lehman Network and global attention,Concat with quantum mechanical descriptors,Regio-selectivity prediction, Natural science
+GNS-https://arxiv.org/pdf/2002.09405.pdf,Particles,Radial particle connectivity,General graph neural network,No mixing/single-channel model,Particle-based simulation, Natural science
+MaSIF-https://www.nature.com/articles/s41592-019-0666-6,Discretized protein surface mesh,Overlapping geodesic radial features,System of Gaussian kernels on a local geodesic system,No mixing/single-channel model,Ligand site prediction and classification, Natural science
+MMGL-https://arxiv.org/pdf/2203.05880.pdf,Patients,Modality aware latent graph,Adaptive graph learning based on a GCN,Sub-branch prediction neural network,Disease prediction, Natural science
