@@ -14,7 +14,7 @@ To address these challenges, multimodal graph AI methods combine different modal
 ![align="center"](images/Figure1.jpg)
 *Shown on the left are the different data modalities covered in our [multimodal graph learning perspective](https://arxiv.org/abs/2209.03299). Shown on the right are key machine learning tasks for which multimodal graph learning (MGL) has been used successfully.*
 
-Below are studies from our [perspective](https://arxiv.org/abs/2209.03299) and the community on multimodal graph learning (MGL) and how they fall under the MGL blueprint. This website is meant as (1) a resouorce to those looking to use MGL for their application but unsure how each compoonent is realized in practice and (2) a map of MGL as an emerging field.
+Below are studies from our [perspective](https://arxiv.org/abs/2209.03299) and the community on multimodal graph learning (MGL) and how they fall under the MGL blueprint. This website is meant as (1) a resource to those looking to use MGL for their application but unsure how each component is realized in practice and (2) a map of MGL as an emerging field.
 
 **This table is live meaning anyone can submit a study to be considered for this table** and we will update the table **every week**. Entries are grouped by application area. 
 
